@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+   
+    
+  </head>
+  <style>
+    @font-face {
+      font-family:"RWEmedium" ;
+      src: url(fonts/RWE\ Sans\ Web\ Medium.otf) format('OpenType')
+     ;
+    } 
+    body{
+        background-color: #FFFFFF;
+    }
+    h1{
+        text-align:center;
+        color:#1D4477;
+        font-family: "RWEmedium", sans-serif;
+         font-weight: 400;
+        font-size: 50px;
+        text-shadow: 2px white;
+        margin-top:0px;
+
+padding: 0px;
+        margin-bottom: 10px;
+    }
+    
+    h2{
+        text-align: center;
+        color:#00A19F ;
+        font-family: "RWEmedium", sans-serif;
+        font-weight: 400;
+        font-size: x-large;
+    }
+    img{
+        display:flex;
+        margin:0 auto;
+        height:auto;
+        width:auto;
+    }
+    .text{
+        color:#00A19F;
+        text-align:center;
+        font-family:"RWEmedium", sans-serif;
+        margin-left: 350px;
+       margin-right: 350px;
+       margin-top: 500px;
+    }
+      .test{
+        color:#BBE4E9;
+        text-align:justify;
+        font-family:"RWEmedium", sans-serif;
+        font-size: 25px;
+
+       
+    }button {
+        border-radius: 25px;
+        margin: 0 auto;
+        display: block;
+        background-color: #BBE4E9;
+        border: 1px solid #79C2D0;
+        color: #00204A;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 16px 24px;
+        text-decoration: none;
+        transition: all 200ms ease;
+        font-family: "RWEmedium", sans-serif;
+      }
+      button:hover {
+        color: #BBE4E9;
+        background: #3ED8C3;
+        cursor: pointer;
+      }
+      h3{
+        color:#00204A;
+        font-weight: 400;
+        font-size: 35px;
+        font-family:"RWEmedium", sans-serif;
+        text-align: center;
+      }
+      
+      #box{
+        background-color: #3ED8C3;
+        padding: 30px;
+margin-left: 200px;
+      margin-right: 200px;}
+      .name{
+        color:#00204A;
+        text-align: justify;
+        font-size: 35px;
+      }
+      .image{
+        width: 800px;
+        height:600px;
+        display: block;
+      }
+      .foot{
+        font-family: monospace;
+        font-size:large;
+        color:#BBE4E9;
+        text-align: center;
+      }
+      .checked {
+  color: orange;
+}
+
+/* use reverse flexbox to take advantage of flex-direction: reverse */
+.star-rating {
+  display: flex;
+  align-items:center;
+  width: 160px;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  position: relative;
+}
+/* hide the inputs */
+.star-rating input {
+  display: none;
+}
+/* set properties of all labels */
+.star-rating > label {
+  width: 30px;
+  height: 30px;
+  font-family: Arial;
+  font-size: 30px;
+  transition: 0.2s ease;
+  color: orange;
+}
+/* give label a hover state */
+.star-rating label:hover {
+  color: #ff69b4;
+  transition: 0.2s ease;
+}
+.star-rating label:active::before {
+  transform:scale(1.1);
+}
+
+/* set shape of unselected label */
+.star-rating label::before {
+  content: '\2606';
+  position: absolute;
+  top: 0px;
+  line-height: 26px;
+}
+/* set full star shape for checked label and those that come after it */
+.star-rating input:checked ~ label:before {
+  content:'\2605';
+}
+
+.slidershow{
+  width: 700px;
+  height: 400px;
+  margin-top: 150px;
+  overflow: hidden;
+}
+.middle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.navigation{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+.bar{
+  width: 50px;
+  height: 10px;
+  border: 2px solid #fff;
+  margin: 6px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.bar:hover{
+  background: #fff;
+}
+
+input[name="r"]{
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides{
+  width: 500%;
+  height: 100%;
+  display: flex;
+}
+
+.slide{
+  width: 20%;
+  transition: 0.6s;
+}
+.slide img{
+  width: 100%;
+  height: 100%;
+}
+
+#r1:checked ~ .s1{
+  margin-left: 0;
+}
+#r2:checked ~ .s1{
+  margin-left: -20%;
+}
+#r3:checked ~ .s1{
+  margin-left: -40%;
+}
+#r4:checked ~ .s1{
+  margin-left: -60%;
+}
+#r5:checked ~ .s1{
+  margin-left: -80%;
+}
+@-moz-document url-prefix() {
+  .star-rating input:checked ~ label:before {
+  font-size: 36px;
+  line-height: 21px;
+  }
+
+ 
+}  
+
+  </style>
+  <nav>
+  <nav>
+  <ul>
+    <li><strong>Home</strong></li>
+    <li><a href="GalleryKev.html">Gallery</a></li>
+
+  </ul>
+</nav>
+</nav>
+  <body>
+    
+     <hr size="30" width="1440" color="#3ED8C3"> 
+   
+  </br>
+    <h1 > Documentation Builder (DB) </h1>
+  </br>
+
+  <hr size="30" width="1440" color="#3ED8C3">  
+<h2 > RWE Generation UK 2022 </h2>
+    <div class="slidershow middle">
+
+      <div class="slides">
+        <input type="radio" name="r" id="r1" checked>
+        <input type="radio" name="r" id="r2">
+        <input type="radio" name="r" id="r3">
+        <input type="radio" name="r" id="r4">
+        <input type="radio" name="r" id="r5">
+        <div class="slide s1">
+          <img src="RWE.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="RWE2.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="RWE3.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="RWE4.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="RWE5.png  " alt="">
+        </div>
+      </div>
+
+      <div class="navigation">
+        <label for="r1" class="bar"></label>
+        <label for="r2" class="bar"></label>
+        <label for="r3" class="bar"></label>
+        <label for="r4" class="bar"></label>
+        <label for="r5" class="bar"></label>
+      </div>
+    </div>
+  
+  <p class="text">
+    This members-only bar was established in lockdown of 2020. Designed and built by
+     David "Kev Mck Kev" Mckenna and decorated by his loving wife Fiona Mckenna, this family pub provides <strong> free 
+     alcohol!</strong> It is 5 Stars on trip advisor and rates highly in the art community as it is recognised for its beautiful artisan mosaic counter.
+  
+</br>
+
+    This hidden gem in leafy Surrey is perfect for friends, familys and dogs alike! In fact there is a large focus on BYOD: Bring Your Own Dog. 
+</p>
+</br>
+<button id='btn1' type="button" onclick="Member();">
+    Become a member for special deals!
+</button>
+</br>
+</br>
+<button id='btn2'type="button" onclick="Reserve();">
+    Reserve your stool!
+</button>
+</br>
+<div id ="box">
+    <h3 >
+    Testimonials
+</h3>
+<ul class="test">
+    <li>
+        <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<br>
+        <em class="name"> Jamie:</em> "I loved it so much that I used it as my facebook profile!" 
+    </li>
+    <br>
+    <li>
+        <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<br>
+        <em class="name">Gary Aka Speedy:</em> "Great DJs!" 
+    </li>
+    <br>
+    <li>
+        <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<br>
+        <em class="name">Vicks:</em> "The barstools are great! They are perfect for short people like me. They elevvated me to a higher level." 
+    </li>
+   <br>
+    <div class="star-rating">
+      <input type="radio" name="stars" id="star-a" value="5"/>
+      <label for="star-a"></label>
+
+      <input type="radio" name="stars" id="star-b" value="4"/>
+      <label for="star-b"></label>
+  
+      <input type="radio" name="stars" id="star-c" value="3"/>
+      <label for="star-c"></label>
+  
+      <input type="radio" name="stars" id="star-d" value="2"/>
+      <label for="star-d"></label>
+  
+      <input type="radio" name="stars" id="star-e" value="1"/>
+      <label for="star-e"></label>
+</div>
+ <button id="btn3" type="button" onclick="Review();"> Add your review? </button>
+</div>
+
+<footer class="foot">
+  <p>Contact us: kevsbar@kev.com</p>
+  <p>15 Daneswood Close, KT13 9AY, Weybridge,Surrey, UK</a></p>
+</footer>
+
+  </body>
+  <script>
+    
+      
+    function Member(){
+
+        let age = prompt("what is your age?");
+         if (age >= 18) {
+            let name = prompt("what is your name?");
+            let email = prompt("What is your email?");
+          updatebutton(`Hi, ${name}! Thanks for becoming a member! We will be in touch 🤩`);
+        } else {
+          updatebutton(`Hi! Unfortunately you are not quite 18 yet, please come for your 18th Birthday and recieve 10 free drinks with code XHWKI54!`);
+        }
+    }
+    function updatebutton(newheading) {
+        let button1 = document.querySelector('#btn1');
+        button1.innerHTML = newheading;
+      }
+
+     function Reserve(){
+
+        let age = prompt("What is your age?");
+         if (age >= 18) {
+            let name = prompt("What is your name?");
+            let date = prompt("What date would you like to come?");
+            
+          updatebutton2(`Hi, ${name}! You're in luck, we are available! See you on the ${date} 🤩`);
+        } else {
+          updatebutton2(`Hi! Unfortunately you are not quite 18 yet, please come for your 18th Birthday and recieve 10 free drinks with code XHWKI54!`);
+        }
+    }
+    function updatebutton2(newheading2) {
+        let button2 = document.querySelector('#btn2');
+        button2.innerHTML = newheading2;
+      }
+   function Review(){
+    let name = prompt("What is your name?");
+    let review = prompt("What is your review?");
+    updateTest(`${name}:`);
+    updateRev(` "${review}"`);
+
+
+   }
+   function updateTest(newTest){
+let Test = document.querySelector('#em4');
+Test.innerHTML=newTest;
+   }
+   function updateRev(newRev){
+    let Rev =document.querySelector('#p4');
+    Rev.innerHTML=newRev;
+   }
+ 
+    
+   
+  </script>
+</html>
