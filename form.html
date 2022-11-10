@@ -10,4 +10,88 @@
     <meta name="viewport" content="width= device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+  <style>
+    @font-face {
+      font-family: "RWEmedium";
+      src: url(fonts/RWE\ Sans\ Web\ Medium.otf) format("OpenType");
+    }
+    h1 {
+      text-align: center;
+      color: #1d4477;
+      font-family: "RWEmedium", sans-serif;
+      font-weight: 400;
+      font-size: 50px;
+    }
+    .riskHeading {
+      text-align: left;
+      color: #1d4477;
+      font-family: "RWEmedium", sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+    }
+    .riskBlock {
+      text-align: left;
+      color: #1d4477;
+      font-family: "RWEmedium", sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+    }
+  </style>
+  <body>
+    <h1>Data from prev</h1>
+    <div class="riskHeading">
+      <strong>Technical report:</strong> <br /><span
+        class="riskBlock"
+        id="Technical-one"
+      ></span>
+    </div>
+    <br />
+    <div class="riskHeading">
+      <strong> Risk2:</strong> <br /><span
+        class="riskBlock"
+        id="Risk-two"
+      ></span>
+    </div>
+    <br />
+    <div class="riskHeading">
+      <strong> Risk3:</strong> <br /><span
+        class="riskBlock"
+        id="Risk-three"
+      ></span>
+    </div>
+    <br />
+  </body>
+  <script>
+    //console.log(JSON.parse(sessionStorage.getItem("myObject")));
+    const Technical = sessionStorage.getItem("Technical-one");
+    const risk2Value = sessionStorage.getItem("Risk-two");
+    const risk3Value = sessionStorage.getItem("Risk-three");
+
+    document.getElementById("Technical-one").textContent = Technical;
+
+    //to clear loacl storage
+    //localStorage.remove("myObject");
+
+    window.onload = function checkBlank() {
+      if (risk2Value == "Yes") {
+        document.getElementById("Risk-two").textContent =
+          "Ensure appropriate training. It is an employer's responsibility to ensure that all employees have the appropriate skills and knowledge to carry out their job to the highest standard and to do so safely. This includes basic Health and Safety training as well as tailored and more specific training relating to the role. It's also assumed that employees will come with prior learning and experience too.";
+      } else {
+        document.getElementById("Risk-two").textContent = " N/A";
+      }
+      if (risk3Value == "Yes") {
+        document.getElementById("Risk-three").textContent =
+          "Safety Standards for Potentially Explosive Atmospheres There are two European Directives for controlling explosive atmospheres, these are known as ATEX. ATEX is implemented in the UK through DSEAR, the Dangerous Substances and Explosive Atmospheres Regulations, 2002.";
+      } else {
+        document.getElementById("Risk-three").textContent = " N/A";
+      }
+    };
+
+    function R2(addRisk1) {
+      let updatep1 = document.querySelector("#para1");
+      updatep1.innerHTML = addRisk1;
+    }
+
+    sessionStorage.clear();
+  </script>
 </html>

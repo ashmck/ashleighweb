@@ -21,25 +21,25 @@
       color: #00204a;
       font-size: 20px;
     }
-     button {
-        border-radius: 25px;
-        margin: 0 auto;
-        display: block;
-        background-color: #BBE4E9;
-        border: 1px solid #79C2D0;
-        color: #00204A;
-        font-size: 16px;
-        line-height: 22px;
-        padding: 16px 24px;
-        text-decoration: none;
-        transition: all 200ms ease;
-        font-family: "RWEmedium", sans-serif;
-      }
-      button:hover {
-        color: #BBE4E9;
-        background: #3ED8C3;
-        cursor: pointer;
-      }
+    button {
+      border-radius: 25px;
+      margin: 0 auto;
+      display: block;
+      background-color: #bbe4e9;
+      border: 1px solid #79c2d0;
+      color: #00204a;
+      font-size: 16px;
+      line-height: 22px;
+      padding: 16px 24px;
+      text-decoration: none;
+      transition: all 200ms ease;
+      font-family: "RWEmedium", sans-serif;
+    }
+    button:hover {
+      color: #bbe4e9;
+      background: #3ed8c3;
+      cursor: pointer;
+    }
     h3 {
       color: #00204a;
       font-weight: 400;
@@ -47,37 +47,59 @@
       font-family: "RWEmedium", sans-serif;
       text-align: center;
     }
-
-    
   </style>
   <body>
-    <form action="/action_page.php" id="form">
-      <input type="checkbox" id="risk1" name="risk1" value="Heights" />
-      <label for="risk1"> Working from heights</label><br />
-      <input type="checkbox" id="risk2" name="risk2" value="Hot" />
-      <label for="risk2"> Hot environments</label><br />
-      <input type="checkbox" id="risk3" name="risk3" value="Explosive" />
-      <label for="risk3"> Explosive environments</label><br /><br />
-      <button id='btn5' type="button">
-  <a href="form.html">Generate form</a>
+    <form id="form">
+      <div>
+        <label for="Technical">
+          Please copy and paste technical report here: </label
+        ><br />
+        <input type="text" id="Technical" />
+      </div>
+      <div>
+        <label for="risk2"> Hot Environments</label><br />
+        <input type="checkbox" id="risk2" />
+      </div>
+      <div>
+        <label for="risk3"> Explosive environments</label><br />
+        <input type="checkbox" id="risk3" />
+      </div>
+      <div>
+        <button type="submit" onclick="checked();">Generate form</button>
+      </div>
     </form>
 
     <script>
-const form = document.getElementById('form');
-const risk1 = document.getElementById('risk1');
-const risk2 = document.getElementById('risk2');
-const risk3 = document.getElementById('risk3');
+      const form = document.getElementById("form");
+      const Technical = document.getElementById("Technical");
+      const risk2 = document.getElementById("risk2");
+      const risk3 = document.getElementById("risk3");
 
-form.addEventListener('sumbit',function(e){
-  e.preventDefault();
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-  const risk1Value = risk1.value;
-  const risk2Value = risk2.value;
-  const risk3Value = risk3.value; 
+        const TechnicalValue = Technical.value;
+        const risk2Value = risk2.value;
+        const risk3Value = risk3.value;
 
-  localStorage
-})
+        // sessionStorage.setItem( "myObject",
+        //  JSON.stringify([TechnicalValue, risk2Value]));
+        sessionStorage.setItem("Technical-one", TechnicalValue);
+        window.location.href = "form.html";
+      });
 
+      function checked() {
+        if (document.getElementById("risk2").checked) {
+          sessionStorage.setItem("Risk-two", "Yes");
+        } else {
+          sessionStorage.setItem("Risk-two", "No");
+        }
+        if (document.getElementById("risk3").checked) {
+          sessionStorage.setItem("Risk-three", "Yes");
+        } else {
+          sessionStorage.setItem("Risk-three", "No");
+        }
+      }
     </script>
   </body>
 </html>
