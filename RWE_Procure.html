@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    @font-face {
+      font-family: "RWEmedium";
+      src: url(fonts/RWE\ Sans\ Web\ Medium.otf) format("OpenType");
+    }
+    /* use reverse flexbox to take advantage of flex-direction: reverse */
+    label {
+      font-family: "RWEmedium", sans-serif;
+      color: #00204a;
+      font-size: 20px;
+    }
+     button {
+        border-radius: 25px;
+        margin: 0 auto;
+        display: block;
+        background-color: #BBE4E9;
+        border: 1px solid #79C2D0;
+        color: #00204A;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 16px 24px;
+        text-decoration: none;
+        transition: all 200ms ease;
+        font-family: "RWEmedium", sans-serif;
+      }
+      button:hover {
+        color: #BBE4E9;
+        background: #3ED8C3;
+        cursor: pointer;
+      }
+    h3 {
+      color: #00204a;
+      font-weight: 400;
+      font-size: 10px;
+      font-family: "RWEmedium", sans-serif;
+      text-align: center;
+    }
+
+    
+  </style>
+  <body>
+    <form action="/action_page.php" id="form">
+      <input type="checkbox" id="risk1" name="risk1" value="Heights" />
+      <label for="risk1"> Working from heights</label><br />
+      <input type="checkbox" id="risk2" name="risk2" value="Hot" />
+      <label for="risk2"> Hot environments</label><br />
+      <input type="checkbox" id="risk3" name="risk3" value="Explosive" />
+      <label for="risk3"> Explosive environments</label><br /><br />
+      <button id='btn5' type="button">
+  <a href="form.html">Generate form</a>
+    </form>
+
+    <script>
+const form = document.getElementById('form');
+const risk1 = document.getElementById('risk1');
+const risk2 = document.getElementById('risk2');
+const risk3 = document.getElementById('risk3');
+
+form.addEventListener('sumbit',function(e){
+  e.preventDefault();
+
+  const risk1Value = risk1.value;
+  const risk2Value = risk2.value;
+  const risk3Value = risk3.value; 
+
+  localStorage
+})
+
+    </script>
+  </body>
+</html>
